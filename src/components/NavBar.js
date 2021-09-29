@@ -1,4 +1,6 @@
 import React from "react";
+import Carrito from "./Carrito";
+import { Navbar, Nav } from "react-bootstrap";
 
 function NavBar() {
   const MiPrimerNavBar = (
@@ -45,6 +47,11 @@ function NavBar() {
                 <li class="nav-item">
                   <a class="nav-link" href="">
                     Contacto
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a>
+                    <Carrito/>
                   </a>
                 </li>
               </ul>
