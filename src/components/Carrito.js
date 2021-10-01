@@ -1,9 +1,15 @@
 import React from 'react'
+import BiCartAlt from 'react-icons/fa';
 
 const Carrito=()=> {
     return <MiPrimerCarrito texto="" numero="4"/>
 }
 const MiPrimerCarrito=(props)=>{
-    const jsx = <div> <img src="./assets/img/148964.svg"></img> {props.numero}</div>
+    const jsx = (
+    <div class="container-fluid"> 
+        <p><BiCartAlt/>{props.numero}</p>
+    </div>
+    );
+    return jsx;
 }
 export default Carrito
