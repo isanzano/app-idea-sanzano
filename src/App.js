@@ -1,14 +1,15 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import Estado from './components/Estado';
+import Carrito from './components/Carrito';
 import { Button , Container, Col, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Component } from 'react';
 
 function App() {
   return (
     <div>
       <NavBar />
-      <Estado />
+      <Carrito />
     </div>
   )
 }

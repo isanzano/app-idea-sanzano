@@ -1,64 +1,30 @@
 import React from "react";
 import Carrito from "./Carrito";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Container} from "react-bootstrap";
 
 function NavBar() {
   const MiPrimerNavBar = (
-    <div class="container-fluid divBg">
-      <div class="row">
-        <div class="col-lg-12 col-md-12">
-          <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
-            <a class="navbar-brand" href="#">
-              Veterinaria Independencia
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">
-                    Inicio<span class="sr-only">(current)</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="">
-                    Quiénes Somos
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="">
-                    Clínica Veterinaria
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="">
-                    Otros Servicios
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="">
-                    Contacto
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a>
-                    <Carrito/>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
+    <div>
+      <Navbar bg="light" expand="lg">
+        <Container>
+          <Navbar.Brand href="#home">Veterinaria Independencia</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="#home">Inicio</Nav.Link>
+              <Nav.Link href="#link">Clinica</Nav.Link>
+              <NavDropdown title="Más" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Quienes Somos?</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Otros Servicios</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Otros</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">Contacto</NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="#carrito"> <Carrito/> </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </div>
   );
   return (
