@@ -3,9 +3,10 @@ import "./App.css";
 //components
 import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar";
+import UserCard from "./components/UserCard/UserCard";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 //bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
-import UserCard from "./components/UserCard/UserCard";
 // import {Container, Row,Col} from 'react-bootstrap' ;
 
 class App extends React.Component {
@@ -19,6 +20,7 @@ class App extends React.Component {
 						color="black"
 					/>
 					<NavBar />
+					<ItemListContainer greeting="Bienvenidos a nuestro sitio" />
 					<div className="UserSection">
 						<UserCard
 							name="Miles Morales"
